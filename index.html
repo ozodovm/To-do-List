@@ -27,13 +27,16 @@
         <input required class="todo-input border border-gray-300 p-3 rounded-lg w-full mb-3 focus:outline-none" type="text" placeholder="Add your todo . .">
         <button class="bg-blue-500 text-white w-full p-3 rounded-lg hover:bg-blue-600">Add</button>
     </form>
-    <ul class="flex justify-between mb-4">
-      <li class="filter-btn w-[32%] text-center bg-green-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-green-500">All<span>(0)</span></li>
-      <li class="filter-btn w-[32%] text-center bg-blue-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-blue-500">Completed<span>(0)</span></li>
-      <li class="filter-btn w-[32%] text-center bg-red-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-red-500">Uncompleted<span>(0)</span></li>
+    <ul class="counts-wrapper flex justify-between mb-4">
+      <li class="all-count-btn w-[32%] text-center bg-green-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-green-500">All(<span class="all-count">0</span>)</li>
+      <li class="complated-count-btn w-[32%] text-center bg-blue-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-blue-500">Completed(<span class="complated-count">0</span>)</li>
+      <li class="uncomplated-count-btn w-[32%] text-center bg-red-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-red-500">Uncompleted(<span class="uncomplated-count">0</span>)</li>
     </ul>
     <ul class="todo-list list-none space-y-4"></ul>
-</div>
+  </div>
+  <div id="wrapper" class="wrapper fixed top-0 right-0 bottom-0 backdrop-blur scale-0 duration-300">
+    <div class=" modal-inner absolute w-[400px] left-0 right-0 mt-[100px] p-5 bg-slate-400 rounded-lg"></div>
+  </div>
     <script src="./js/todo.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
